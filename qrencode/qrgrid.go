@@ -398,7 +398,7 @@ func isWhiteHorizontal(grid *BitGrid, rowIndex int, from int, to int) bool {
 
 func isWhiteVertical(grid *BitGrid, colIndex int, from int, to int) bool {
 	for i := from; i < to; i++ {
-		if i > 0 && i < grid.Height() && grid.Get(colIndex, i) {
+		if i >= 0 && i < grid.Height() && grid.Get(colIndex, i) {
 			return false
 		}
 	}
